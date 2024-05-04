@@ -61,7 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\SpawnEnemy.cs" />
+    <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\LocomotionController.cs" />
+    <Compile Include="Assets\Scripts\ArrowController.cs" />
+    <Compile Include="Assets\Scripts\ZombieAttackController.cs" />
     <Compile Include="Assets\Scripts\MoveToGoal.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
   </ItemGroup>

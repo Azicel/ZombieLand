@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "E:\\Programming\\git\\ZombieLand\\ZombieLand\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C4F1AC3-2615-950F-E47B-BFE7FB15D0A4}|Assembly-CSharp.csproj|e:\\programming\\git\\zombieland\\zombieland\\assets\\scripts\\locomotioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C4F1AC3-2615-950F-E47B-BFE7FB15D0A4}|Assembly-CSharp.csproj|e:\\programming\\git\\zombieland\\zombieland\\assets\\scripts\\zombieattackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C4F1AC3-2615-950F-E47B-BFE7FB15D0A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombieattackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C4F1AC3-2615-950F-E47B-BFE7FB15D0A4}|Assembly-CSharp.csproj|E:\\Programming\\git\\ZombieLand\\ZombieLand\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C4F1AC3-2615-950F-E47B-BFE7FB15D0A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C4F1AC3-2615-950F-E47B-BFE7FB15D0A4}|Assembly-CSharp.csproj|E:\\Programming\\git\\ZombieLand\\ZombieLand\\assets\\scripts\\arrowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C4F1AC3-2615-950F-E47B-BFE7FB15D0A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\arrowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C4F1AC3-2615-950F-E47B-BFE7FB15D0A4}|Assembly-CSharp.csproj|E:\\Programming\\git\\ZombieLand\\ZombieLand\\assets\\scripts\\locomotioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C4F1AC3-2615-950F-E47B-BFE7FB15D0A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\locomotioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C4F1AC3-2615-950F-E47B-BFE7FB15D0A4}|Assembly-CSharp.csproj|e:\\programming\\git\\zombieland\\zombieland\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C4F1AC3-2615-950F-E47B-BFE7FB15D0A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C4F1AC3-2615-950F-E47B-BFE7FB15D0A4}|Assembly-CSharp.csproj|e:\\programming\\git\\zombieland\\zombieland\\assets\\scripts\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C4F1AC3-2615-950F-E47B-BFE7FB15D0A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C4F1AC3-2615-950F-E47B-BFE7FB15D0A4}|Assembly-CSharp.csproj|E:\\Programming\\git\\ZombieLand\\ZombieLand\\assets\\scripts\\spawnenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,12 +43,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ZombieAttackController.cs",
+              "DocumentMoniker": "E:\\Programming\\git\\ZombieLand\\ZombieLand\\Assets\\Scripts\\ZombieAttackController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ZombieAttackController.cs",
+              "ToolTip": "E:\\Programming\\git\\ZombieLand\\ZombieLand\\Assets\\Scripts\\ZombieAttackController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ZombieAttackController.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAmwBsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T11:25:54.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ArrowController.cs",
+              "DocumentMoniker": "E:\\Programming\\git\\ZombieLand\\ZombieLand\\Assets\\Scripts\\ArrowController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ArrowController.cs",
+              "ToolTip": "E:\\Programming\\git\\ZombieLand\\ZombieLand\\Assets\\Scripts\\ArrowController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ArrowController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T11:11:54.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnemyController.cs",
+              "DocumentMoniker": "E:\\Programming\\git\\ZombieLand\\ZombieLand\\Assets\\Scripts\\EnemyController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyController.cs",
+              "ToolTip": "E:\\Programming\\git\\ZombieLand\\ZombieLand\\Assets\\Scripts\\EnemyController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\EnemyController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T11:01:53.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "LocomotionController.cs",
               "DocumentMoniker": "E:\\Programming\\git\\ZombieLand\\ZombieLand\\Assets\\Scripts\\LocomotionController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LocomotionController.cs",
               "ToolTip": "E:\\Programming\\git\\ZombieLand\\ZombieLand\\Assets\\Scripts\\LocomotionController.cs",
               "RelativeToolTip": "Assets\\Scripts\\LocomotionController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAApAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-30T11:31:49.117Z",
               "EditorCaption": ""
@@ -49,14 +100,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
               "ToolTip": "E:\\Programming\\git\\ZombieLand\\ZombieLand\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACIAAABvAAAA",
+              "ViewState": "AQIAAD8AAAAAAAAAAADwv1EAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-30T10:51:32.729Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "SpawnEnemy.cs",
               "DocumentMoniker": "E:\\Programming\\git\\ZombieLand\\ZombieLand\\Assets\\Scripts\\SpawnEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SpawnEnemy.cs",
@@ -68,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "MoveToGoal.cs",
               "DocumentMoniker": "E:\\Programming\\git\\ZombieLand\\ZombieLand\\Assets\\Scripts\\MoveToGoal.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MoveToGoal.cs",
