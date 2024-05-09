@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class PlayerController : MonoBehaviour
     private float rotationSpeed = 10f;
     private bool aiming = false;
     private float maxHealth = 100f;
+    private float force = 1f;
+    private float deltaTime;
+    private bool readyToShoot;
+
 
     private CharacterController controller;
     private PlayerInput playerInput;
@@ -22,6 +27,8 @@ public class PlayerController : MonoBehaviour
     private InputAction shootAction;
     private InputAction aimAction;
     private Transform cameraTransform;
+
+    private bool once;
 
     void Start()
     {
@@ -31,12 +38,16 @@ public class PlayerController : MonoBehaviour
         shootAction = playerInput.actions["Shoot"];
         aimAction = playerInput.actions["Aim"];
         cameraTransform = Camera.main.transform;
-        health = maxHealth;
+        health = maxHealth;      
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(transform.position.y > 0 )
+        {
+            controller.transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+        }
         if (health <= 0)
             Destroy(gameObject);
         Vector2 input = moveAction.ReadValue<Vector2>();
@@ -47,22 +58,50 @@ public class PlayerController : MonoBehaviour
             startAim();
         else if (aiming)
             stopAim();
-        if (shootAction.WasPerformedThisFrame())
+        if (shootAction.WasPerformedThisFrame() || shootAction.inProgress)
+        {
+            AddShootingForce();
+            readyToShoot = true;
+        }
+        else if (readyToShoot)
+        {
             Shoot();
+            readyToShoot = false;
+        }
         controller.Move(move * Time.deltaTime * playerSpeed);
         Quaternion targetRotation = Quaternion.Euler(0, cameraTransform.eulerAngles.y, 0);
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed*Time.deltaTime);
+        shootPoint.transform.rotation = Quaternion.Euler(cameraTransform.eulerAngles);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed*Time.deltaTime);    
+    }
+
+    private void AddShootingForce()
+    {
+
+        if (!aiming && !once)
+        {
+            playerSpeed = playerSpeed / 2;
+            once = true;
+        }
+        if (force < 100f && deltaTime > 0.1f)
+        {
+            force += 10f;
+            deltaTime = 0;
+        }
+        deltaTime += Time.deltaTime;
     }
 
     private void Shoot()
     {
-        if (!aiming)
-            playerSpeed = playerSpeed / 2;
-        var shot = Instantiate(arrow, shootPoint.position, transform.rotation);
+        var shot = Instantiate(arrow, shootPoint.position, shootPoint.transform.rotation);
+        shot.GetComponent<ArrowController>().force = force;
         var physics = shot.GetComponent<Rigidbody>();
-        physics.AddForce(shot.transform.forward * 10f, ForceMode.Impulse);
+        physics.AddForce(shot.transform.forward * force, ForceMode.Impulse);
         if (!aiming)
+        {
             playerSpeed = playerSpeed * 2;
+            once = false;
+        }
+        force = 1f;
     }
 
     private void startAim()
@@ -81,4 +120,6 @@ public class PlayerController : MonoBehaviour
     {
         health -= 10;
     }
+
+    
 }

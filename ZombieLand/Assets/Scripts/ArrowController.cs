@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class ArrowController : MonoBehaviour
 {
-    private float lifetime = 100f;
+    public float force;
+    public float health = 2f;
+    private float lifetime = 20f;
     private float time = 0f;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,8 @@ public class ArrowController : MonoBehaviour
     {
         time += Time.deltaTime;
         if(time > lifetime)
+            Destroy(gameObject);
+        if (health <= 0f)
             Destroy(gameObject);
     }
 }
