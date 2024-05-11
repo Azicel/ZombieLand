@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
     
     public Transform player;
     private NavMeshAgent agent;
-    private float health = 3f;
+    private float health = 4f;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -19,7 +19,10 @@ public class EnemyController : MonoBehaviour
     {
         agent.SetDestination(player.position);
         if (health <= 0)
+        {
+            Camera.main.GetComponent<SpawnEnemy>().currentEnemycount--;
             Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

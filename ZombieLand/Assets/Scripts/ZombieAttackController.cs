@@ -17,10 +17,13 @@ public class ZombieAttackController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
+        time += Time.fixedDeltaTime;
         if (time > timeBetweenAttacks)
             if (player is not null)
+            {
                 player.RecieveDamage();
+                time = 0;
+            }
     }
 
     private void OnTriggerEnter(Collider other)

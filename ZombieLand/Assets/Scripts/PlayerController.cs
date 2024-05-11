@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public Transform shootPoint;
     public float health;
 
-    private float playerSpeed = 2.0f;
+    [SerializeField]private float playerSpeed = 2.0f;
     private float rotationSpeed = 10f;
     private bool aiming = false;
     private float maxHealth = 100f;
