@@ -8,14 +8,9 @@ public class ZombieAttackController : MonoBehaviour
     private float timeBetweenAttacks = 1f;
     private float time = 0f;
     private PlayerController player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+
+    void FixedUpdate()
     {
         time += Time.fixedDeltaTime;
         if (time > timeBetweenAttacks)

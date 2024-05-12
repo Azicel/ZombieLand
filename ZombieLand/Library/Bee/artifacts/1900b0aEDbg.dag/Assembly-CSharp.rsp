@@ -368,6 +368,7 @@
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/SpawnEnemy.cs"
 "Assets/Scripts/ZombieAttackController.cs"
+"Assets/Scripts/ZombieLocomotion.cs"
 -langversion:9.0
 /deterministic
 /optimize-

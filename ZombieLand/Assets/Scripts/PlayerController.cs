@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
@@ -16,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private float rotationSpeed = 10f;
     private bool aiming = false;
     private float maxHealth = 100f;
+    [SerializeField] private GameObject healthBar;
+    [SerializeField] private GameObject forceBar;
     private float force = 1f;
     private float deltaTime;
     private bool readyToShoot;
@@ -44,12 +47,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y > 0 )
+        if (health <= 0)
+        {
+            healthBar.SetActive(false);
+            forceBar.SetActive(false);
+            Destroy(gameObject);
+        }
+        if (transform.position.y > 0)
         {
             controller.transform.position = new Vector3(transform.position.x, 0, transform.position.z);
         }
-        if (health <= 0)
-            Destroy(gameObject);
         Vector2 input = moveAction.ReadValue<Vector2>();
         Vector3 move = new Vector3(input.x, 0, input.y);
         move = move.x * cameraTransform.right.normalized + move.z * cameraTransform.forward.normalized;
@@ -85,6 +92,7 @@ public class PlayerController : MonoBehaviour
         if (force < 100f && deltaTime > 0.1f)
         {
             force += 10f;
+            forceBar.GetComponent<Scrollbar>().size += 0.1f;
             deltaTime = 0;
         }
         deltaTime += Time.deltaTime;
@@ -102,6 +110,7 @@ public class PlayerController : MonoBehaviour
             once = false;
         }
         force = 1f;
+        forceBar.GetComponent<Scrollbar>().size = 0.01f;
     }
 
     private void startAim()
@@ -118,6 +127,7 @@ public class PlayerController : MonoBehaviour
 
     public void RecieveDamage()
     {
+        healthBar.GetComponent<Scrollbar>().size -= 0.1f;
         health -= 10;
     }
 

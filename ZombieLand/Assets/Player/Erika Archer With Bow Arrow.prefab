@@ -3149,6 +3149,9 @@ MonoBehaviour:
   arrow: {fileID: 971335433372345108, guid: 2814e032b6f19f945a1cc4dda664e51f, type: 3}
   shootPoint: {fileID: 3522812180547189796}
   health: 0
+  playerSpeed: 3.5
+  healthBar: {fileID: 0}
+  forceBar: {fileID: 0}
 --- !u!114 &5144280387637619693
 MonoBehaviour:
   m_ObjectHideFlags: 0
